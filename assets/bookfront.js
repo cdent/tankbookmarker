@@ -3,6 +3,7 @@
 
 	var booklink = $('.bookmarklet'),
 		bookmarks = $('.bookmarks'),
+		bookfeed = $('.bookfeed'),
 		recipe = window.location.pathname.split('/')[2],
 		origin = window.location.origin,
 		code = origin + '/bags/bookmarker/tiddlers/bookmarker-loader.js',
@@ -67,6 +68,9 @@
 		"a.addEventListener('load',function()%7BloadBookmarker('", html,
 		"','", recipe, "');%7D,false);%7D(null,document))"].join('');
 	booklink.attr('href', href);
+	bookfeed.attr('href', '/recipes/' + recipe
+				+ '/tiddlers.atom'
+				+ '?select=tag:bookmark;sort=-modified;limit=20');
 
 	retrieveBookmarks();
 

@@ -13,14 +13,14 @@ body {
     position: relative;
 }
 
-.bookmarklet {
+.bookicon {
     float: right;
     text-decoration: none;
     color: inherit;
     font-size: 200%;
 }
 
-.bookmarklet i {
+.bookicon i {
     padding: .5em;
 }
 
