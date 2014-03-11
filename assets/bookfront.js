@@ -1,9 +1,8 @@
 (function($){
 	"use strict";
 
-	var bookmarklet = $('.bookmarklet'),
+	var booklink = $('.bookmarklet'),
 		bookmarks = $('.bookmarks'),
-		booklink = $('<a>'),
 		recipe = window.location.pathname.split('/')[2],
 		origin = window.location.origin,
 		code = origin + '/bags/bookmarker/tiddlers/bookmarker-loader.js',
@@ -67,8 +66,7 @@
 		"b.body.appendChild(a);",
 		"a.addEventListener('load',function()%7BloadBookmarker('", html,
 		"','", recipe, "');%7D,false);%7D(null,document))"].join('');
-	booklink.attr('href', href).text('Bookmarklet');
-	bookmarklet.append(booklink);
+	booklink.attr('href', href);
 
 	retrieveBookmarks();
 

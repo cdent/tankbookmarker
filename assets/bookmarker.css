@@ -2,9 +2,28 @@
     padding-right: 1em;
 }
 
-body {
-    margin: 1em;
+html, body {
+    height: 100%;
+    min-height: 100%;
 }
+
+body {
+    margin: 1em auto 1em auto;
+    width: 80%;
+    position: relative;
+}
+
+.bookmarklet {
+    float: right;
+    text-decoration: none;
+    color: inherit;
+    font-size: 200%;
+}
+
+.bookmarklet i {
+    padding: .5em;
+}
+
 
 ul.tags {
     list-style: none;
@@ -27,4 +46,16 @@ ul.tags {
     color: white;
     text-decoration: none;
     padding: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: .5em;
+    right: .5em;
+}
+
+@media screen and (max-width: 62em) {
+    body {
+        width: 100%;
+    }
 }
