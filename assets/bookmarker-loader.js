@@ -41,7 +41,7 @@ window.Bookmarker = {
 	loadDependencies: function(callback) {
 		var self = this,
 			// load script by executing/message passing
-			jQueryLib = 'http://0.0.0.0:8080/bags/tank/tiddlers/jquery.js';
+			jQueryLib = 'https://tank.peermore.com/bags/tank/tiddlers/jquery.js';
 
 		function jQueryTest() {
 			return (typeof window.jQuery !== 'undefined');
